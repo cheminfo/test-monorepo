@@ -23,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        package: ${{ needs.release-please.outputs.paths_released }}
+        package: ${{ fromJSON(needs.release-please.outputs.paths_released) }}
       fail-fast: false
     steps:
       - uses: actions/checkout@v2
