@@ -1,4 +1,5 @@
 {
   "version": "0.2.0",
-  "name": "@cheminfo/test-package1"
+  "name": "@cheminfo/test-package1",
+  "main": "index.js"
 }
