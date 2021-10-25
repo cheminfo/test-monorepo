@@ -10,19 +10,21 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       releases_created: ${{ steps.release.outputs.releases_created }}
+      paths_released: ${{ steps.release.outputs.paths_released }}
     steps:
       - uses: GoogleCloudPlatform/release-please-action@v2
         id: release
         with:
           token: ${{ secrets.BOT_TOKEN }}
           command: manifest
-      - run: echo ${OUTPUTS}
-        env:
-          OUTPUTS: ${{ toJSON(steps.release.outputs) }}
   npm-publish:
     needs: release-please
     if: ${{ needs.release-please.outputs.releases_created }}
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        package: ${{ needs.release-please.outputs.paths_released }}
+      fail-fast: false
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
@@ -30,6 +32,7 @@ jobs:
           node-version: 16.x
           registry-url: 'https://registry.npmjs.org'
       - run: npm install
-      # - run: npm publish --access public
-      #   env:
-      #     NODE_AUTH_TOKEN: ${{ secrets.npm-token }}
+      - name: Publish ${{ matrix.package }}
+        run: npm publish --access public -w ${{ matrix.package }}
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.npm-token }}
