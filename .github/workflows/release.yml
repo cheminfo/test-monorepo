@@ -9,7 +9,7 @@ jobs:
   release-please:
     runs-on: ubuntu-latest
     outputs:
-      release_created: ${{ steps.release.outputs.release_created }}
+      releases_created: ${{ steps.release.outputs.releases_created }}
     steps:
       - uses: GoogleCloudPlatform/release-please-action@v2
         id: release
@@ -21,7 +21,7 @@ jobs:
           OUTPUTS: ${{ toJSON(steps.release.outputs) }}
   npm-publish:
     needs: release-please
-    if: ${{ needs.release-please.outputs.release_created }}
+    if: ${{ needs.release-please.outputs.releases_created }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
