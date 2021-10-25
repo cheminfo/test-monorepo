@@ -1,7 +1,7 @@
 {
-  "version": "0.2.0",
+  "version": "0.2.1",
   "name": "@cheminfo/test-package2",
   "dependencies": {
-    "@cheminfo/test-package1": "^0.2.0"
+    "@cheminfo/test-package1": "^0.3.0"
   }
 }

@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.0](https://www.github.com/cheminfo/test-monorepo/compare/test-package1-v0.2.0...test-package1-v0.3.0) (2021-10-25)
+
+
+### Features
+
+* update package1 ([5f895df](https://www.github.com/cheminfo/test-monorepo/commit/5f895dff929f9e5b7f6ee4a59b9e5db5bab6f888))
+
 ## [0.2.0](https://www.github.com/cheminfo/test-monorepo/compare/test-package1-v0.1.0...test-package1-v0.2.0) (2021-10-25)
 
 
