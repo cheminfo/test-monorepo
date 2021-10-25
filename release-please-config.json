@@ -2,6 +2,7 @@
   "plugins": ["node-workspace"],
   "release-type": "node",
   "bump-minor-pre-major": true,
+  "monorepo-tags": true,
   "packages": {
     "packages/package1": {},
     "packages/package2": {}
