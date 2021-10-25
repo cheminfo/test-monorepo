@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.2.2](https://www.github.com/cheminfo/test-monorepo/compare/test-package2-v0.2.1...test-package2-v0.2.2) (2021-10-25)
+
+
+### Bug Fixes
+
+* add index.js ([5e31d6b](https://www.github.com/cheminfo/test-monorepo/commit/5e31d6b7da24f6d38e2b362778b8510515b5ac30))
+
 ### [0.2.1](https://www.github.com/cheminfo/test-monorepo/compare/test-package2-v0.2.0...test-package2-v0.2.1) (2021-10-25)
 
 
