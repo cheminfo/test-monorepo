@@ -1,5 +1,7 @@
 {
-  "private": true,
   "version": "0.1.0",
-  "name": "package2"
+  "name": "@cheminfo/test-package2",
+  "dependencies": {
+    "@cheminfo/test-package1": "^0.1.0"
+  }
 }
