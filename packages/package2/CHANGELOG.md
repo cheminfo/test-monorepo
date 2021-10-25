@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.2.0](https://www.github.com/cheminfo/test-monorepo/compare/test-package2-v0.1.0...test-package2-v0.2.0) (2021-10-25)
+
+
+### Features
+
+* prepare packages for publication ([7cfaa6b](https://www.github.com/cheminfo/test-monorepo/commit/7cfaa6bf5061f472f68d8ee7ded3ea93bf8509db))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @cheminfo/test-package1 bumped from ^0.1.0 to ^0.2.0
+
 ## 0.1.0 (2021-10-25)
 
 
