@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.0](https://www.github.com/cheminfo/test-monorepo/compare/test-package1-v0.3.0...test-package1-v0.4.0) (2021-10-25)
+
+
+### Features
+
+* add export to test publication ([2f32373](https://www.github.com/cheminfo/test-monorepo/commit/2f32373072068306f6d22d75452a9baa7c77fa7c))
+
 ## [0.3.0](https://www.github.com/cheminfo/test-monorepo/compare/test-package1-v0.2.0...test-package1-v0.3.0) (2021-10-25)
 
 
