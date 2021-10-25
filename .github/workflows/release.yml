@@ -35,4 +35,4 @@ jobs:
       - name: Publish ${{ matrix.package }}
         run: npm publish --access public -w ${{ matrix.package }}
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.npm-token }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_BOT_TOKEN }}
