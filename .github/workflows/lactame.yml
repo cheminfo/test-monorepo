@@ -21,6 +21,8 @@ jobs:
         run: echo "CURRENT_FOLDER=packages/package1" >> $GITHUB_ENV
       - name: Get package name
         run: echo "PACKAGE_NAME=$(jq .name ${{ env.CURRENT_FOLDER }}/package.json | tr -d '"')" >> $GITHUB_ENV
+      - name: Build name
+        run: echo "BUILD_NAME=$(jq .${{ env.PACKAGE_NAME }} lactame.json | tr -d '"')" >> $GITHUB_ENV
       - uses: actions/setup-node@v3
         with:
           node-version: ${{ env.NODE_VERSION }}
