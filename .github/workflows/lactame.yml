@@ -16,15 +16,15 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       packageName: ${{ steps.step1.outputs.packageName }}
-      buildName: ${{ steps.step2.outputs.buildname }}
+      buildName: ${{ steps.step2.outputs.buildName }}
     steps:
       - uses: actions/checkout@v3
       - name: event.release
         run: echo "${{toJSON(github.event.release)}}"
       - name: event.release.tagName
-        run: echo "${{github.event.release.tagName}}"
+        run: echo "${{github.event.release.tag_name}}"
       - name: Get package name
-        run: echo "PACKAGE_NAME=`echo "${{github.event.release.tagName}}" | sed -r "s/-[^-]*$//"`" >> $GITHUB_ENV
+        run: echo "PACKAGE_NAME=`echo "${{github.event.release.tag_name}}" | sed -r "s/-[^-]*$//"`" >> $GITHUB_ENV
       - name: Set jobs variable packageName
         id: step1
         run: echo "::set-output name=packageName::${{ env.PACKAGE_NAME}}"
