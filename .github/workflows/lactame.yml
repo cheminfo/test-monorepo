@@ -42,7 +42,7 @@ jobs:
       - name: Get package name
         run: echo "PACKAGE_NAME=${{ needs.install.outputs.packageName }}" >> $GITHUB_ENV
       - name: Build name
-        run: echo "PACKAGE_NAME=${{ needs.install.outputs.buildname }}" >> $GITHUB_ENV
+        run: echo "BUILD_NAME=${{ needs.install.outputs.buildname }}" >> $GITHUB_ENV
       - name: Set current folder name
         run: echo "CURRENT_FOLDER=packages/${{ env.PACKAGE_NAME }}" >> $GITHUB_ENV
       - uses: actions/setup-node@v3
