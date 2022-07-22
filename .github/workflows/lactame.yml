@@ -12,18 +12,19 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "${{ toJSON(github.event) }}"
-      - run: echo "${{ github.event.published }}"
+      - run: echo "${{ toJSON(github.event.published) }}"
       - uses: actions/checkout@v3
+      - name: Set current folder name
+        run: echo "CURRENT_FOLDER=packages/package1 | tr -d '"')" >> $GITHUB_ENV
       - name: Get package name
-        run: echo "PACKAGE_NAME=$(jq .name package.json | tr -d '"')" >> $GITHUB_ENV
+        run: echo "PACKAGE_NAME=$(jq .name ${{ env.CURRENT_FOLDER }}/package.json | tr -d '"')" >> $GITHUB_ENV
       - uses: actions/setup-node@v3
         with:
           node-version: ${{ env.NODE_VERSION }}
       - name: Install dependencies
         run: npm install
       - name: Build project
-        run: npm run build
+        run: cheminfo-build --cwd packages/package1 --entry index.js --root TestMulti"
       - name: Deploy to lactame.com
         uses: zakodium/lactame-action@v1
         with:
