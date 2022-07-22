@@ -36,6 +36,7 @@ jobs:
     needs: install
     if: ${{ needs.install.outputs.buildName }}
     steps:
+      - uses: actions/checkout@v3
       - name: Echo package name
         run: echo "${{ needs.install.outputs.buildName }}"
       - name: Get package name
