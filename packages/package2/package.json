@@ -1,8 +1,8 @@
 {
-  "version": "0.2.10",
+  "version": "0.2.11",
   "name": "@cheminfo/test-package2",
   "main": "index.js",
   "dependencies": {
-    "@cheminfo/test-package1": "^0.4.7"
+    "@cheminfo/test-package1": "^0.4.8"
   }
 }
