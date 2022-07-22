@@ -19,8 +19,6 @@ jobs:
       buildName: ${{ steps.step2.outputs.buildName }}
     steps:
       - uses: actions/checkout@v3
-      - name: event.release
-        run: echo "${{toJSON(github.event.release)}}"
       - name: event.release.tagName
         run: echo "${{github.event.release.tag_name}}"
       - name: Get package name
