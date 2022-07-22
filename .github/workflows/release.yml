@@ -17,8 +17,6 @@ jobs:
         with:
           token: ${{ secrets.BOT_TOKEN }}
           command: manifest
-      - name: Show output
-        run: echo "${{ toJSON( steps.release.outputs ) }}"
   npm-publish:
     needs: release-please
     if: ${{ needs.release-please.outputs.releases_created }}
