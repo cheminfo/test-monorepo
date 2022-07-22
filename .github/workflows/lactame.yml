@@ -14,12 +14,13 @@ env:
 jobs:
   install:
     runs-on: ubuntu-latest
+    outputs:
+      - packageName: ${{ steps.step1.outputs.packageName }}
+      - buildName: ${{ steps.step2.outputs.buildname }}
     steps:
       - run: echo "${{ toJSON(github.event.published) }}"
       - uses: actions/checkout@v3
-      - outputs:
-          - packageName: ${{ steps.step1.outputs.packageName }}
-          - buildName: ${{ steps.step2.outputs.buildname }}
+
       - name: Get package name
         id: step1 
         run: echo "PACKAGE_NAME=package1" >> $GITHUB_ENV
@@ -36,7 +37,7 @@ jobs:
     steps:
       - name: Get package name
         run: echo "${{ needs.install.outputs.buildName }}"
-        run: echo "PACKAGE_NAME=package1" >> $GITHUB_ENV
+        run: echo "PACKAGE_NAME=${{ needs.install.outputs.packageName }}" >> $GITHUB_ENV
       - name: Build name
         run: echo "BUILD_NAME=$(jq .${{ env.PACKAGE_NAME }} lactame.json | tr -d '"')" >> $GITHUB_ENV
       - name: Set current folder name
