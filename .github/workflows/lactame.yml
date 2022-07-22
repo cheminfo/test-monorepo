@@ -27,7 +27,7 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Build project
-        run: cheminfo-build --cwd ${{ env.CURRENT_FOLDER }} --entry index.js --root TestMulti
+        run: npx cheminfo-build --cwd ${{ env.CURRENT_FOLDER }} --entry index.js --root TestMulti
       - name: Deploy to lactame.com
         uses: zakodium/lactame-action@v1
         with:
