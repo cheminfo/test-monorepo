@@ -42,16 +42,16 @@ jobs:
       - name: Get package name
         run: echo "PACKAGE_NAME=${{ needs.install.outputs.packageName }}" >> $GITHUB_ENV
       - name: Build name
-        run: echo "BUILD_NAME=$(jq .${{ env.PACKAGE_NAME }} lactame.json | tr -d '"')" >> $GITHUB_ENV
+        run: echo "PACKAGE_NAME=${{ needs.install.outputs.buildname }}" >> $GITHUB_ENV
       - name: Set current folder name
-        run: echo "CURRENT_FOLDER=packages/{{ env.PACKAGE_NAME }}" >> $GITHUB_ENV
+        run: echo "CURRENT_FOLDER=packages/${{ env.PACKAGE_NAME }}" >> $GITHUB_ENV
       - uses: actions/setup-node@v3
         with:
           node-version: ${{ env.NODE_VERSION }}
       - name: Install dependencies
         run: npm install
       - name: Build project
-        run: npx cheminfo-build --cwd ${{ env.CURRENT_FOLDER }} --entry index.js --root TestMulti
+        run: npx cheminfo-build --cwd ${{ env.CURRENT_FOLDER }} --entry index.js --root ${{ env.BUILD_NAME }}
       - name: Deploy to lactame.com
         uses: zakodium/lactame-action@v1
         with:
