@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.4.9](https://www.github.com/cheminfo/test-monorepo/compare/test-package1-v0.4.8...test-package1-v0.4.9) (2022-07-22)
+
+
+### Bug Fixes
+
+* rename folder to match packages ([ecbc35f](https://www.github.com/cheminfo/test-monorepo/commit/ecbc35f672a8ab436c2b7a8264eee2c5acbce290))
+
 ### [0.4.8](https://www.github.com/cheminfo/test-monorepo/compare/test-package1-v0.4.7...test-package1-v0.4.8) (2022-07-22)
 
 
