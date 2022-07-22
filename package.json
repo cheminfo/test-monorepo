@@ -7,6 +7,7 @@
     "packages/*"
   ],
   "scripts": {
+    "build": "cheminfo-build --cwd packages/package1 --entry index.js --root TestMulti",
     "dev": "npm run tsc-watch",
     "eslint": "eslint .",
     "eslint-fix": "npm run eslint -- --fix",
@@ -29,6 +30,7 @@
   "homepage": "https://github.com/cheminfo/test-monorepo#readme",
   "devDependencies": {
     "@types/jest": "^27.0.2",
+    "cheminfo-build": "^1.1.11",
     "eslint": "^8.1.0",
     "eslint-config-cheminfo-typescript": "^10.1.1",
     "jest": "^27.3.1",
