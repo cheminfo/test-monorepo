@@ -18,8 +18,8 @@ jobs:
       packageName: ${{ steps.step1.outputs.packageName }}
       buildName: ${{ steps.step2.outputs.buildname }}
     steps:
-      - run: echo "${{ toJSON(github.event.release) }}"
-      - run: echo "${{ toJSON(github.event.published) }}"
+      - name: event.release
+        run: echo "${{ toJSON(github.event.release) }}"
       - uses: actions/checkout@v3
       - name: Get package name
         run: echo "PACKAGE_NAME=package1" >> $GITHUB_ENV
