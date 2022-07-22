@@ -15,8 +15,8 @@ jobs:
   install:
     runs-on: ubuntu-latest
     outputs:
-      - packageName: ${{ steps.step1.outputs.packageName }}
-      - buildName: ${{ steps.step2.outputs.buildname }}
+      packageName: ${{ steps.step1.outputs.packageName }}
+      buildName: ${{ steps.step2.outputs.buildname }}
     steps:
       - run: echo "${{ toJSON(github.event.published) }}"
       - uses: actions/checkout@v3
