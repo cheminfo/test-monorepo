@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.4.4](https://www.github.com/cheminfo/test-monorepo/compare/test-package1-v0.4.3...test-package1-v0.4.4) (2022-07-22)
+
+
+### Bug Fixes
+
+* 42 ([a310386](https://www.github.com/cheminfo/test-monorepo/commit/a3103862055c465035ab5be1f1b041f8e8151747))
+
 ### [0.4.3](https://www.github.com/cheminfo/test-monorepo/compare/test-package1-v0.4.2...test-package1-v0.4.3) (2022-07-22)
 
 

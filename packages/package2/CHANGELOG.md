@@ -1,5 +1,14 @@
 # Changelog
 
+### [0.2.7](https://www.github.com/cheminfo/test-monorepo/compare/test-package2-v0.2.6...test-package2-v0.2.7) (2022-07-22)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @cheminfo/test-package1 bumped from ^0.4.3 to ^0.4.4
+
 ### [0.2.6](https://www.github.com/cheminfo/test-monorepo/compare/test-package2-v0.2.5...test-package2-v0.2.6) (2022-07-22)
 
 
