@@ -5,7 +5,7 @@
   "bump-minor-pre-major": true,
   "monorepo-tags": true,
   "packages": {
-    "packages/package1": {},
-    "packages/package2": {}
+    "packages/test-package1": {},
+    "packages/test-package2": {}
   }
 }
