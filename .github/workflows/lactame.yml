@@ -27,7 +27,7 @@ jobs:
         id: step1
         run: echo "::set-output name=packageName::${{ env.PACKAGE_NAME}}"
       - name: Build name
-        run: echo "BUILD_NAME=$(jq .${{ env.PACKAGE_NAME }} lactame.json | tr -d '"')" >> $GITHUB_ENV
+        run: echo "BUILD_NAME=$(jq ".\"${{ env.PACKAGE_NAME }}\"" lactame.json | tr -d '"')" >> $GITHUB_ENV
       - name: Set jobs variable buildName
         id: step2
         run: echo "::set-output name=buildName::${{ env.BUILD_NAME}}"
