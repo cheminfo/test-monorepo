@@ -20,9 +20,11 @@ jobs:
     steps:
       - name: event.release
         run: echo "${{ toJSON(github.event.release) }}"
+      - name: event.release.tagName
+        run: echo "${{ toJSON(github.event.release.tagName) }}"
       - uses: actions/checkout@v3
       - name: Get package name
-        run: echo "PACKAGE_NAME=package1" >> $GITHUB_ENV
+        run: echo "PACKAGE_NAME=`echo "${{ toJSON(github.event.release.tagName) }}" | sed -r "s/-[^-]*$//"`" >> $GITHUB_ENV
       - name: Set jobs variable packageName
         id: step1
         run: echo "::set-output name=packageName::${{ env.PACKAGE_NAME}}"
