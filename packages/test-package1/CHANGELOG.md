@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.4.11](https://www.github.com/cheminfo/test-monorepo/compare/test-package1-v0.4.10...test-package1-v0.4.11) (2022-07-23)
+
+
+### Bug Fixes
+
+* deal with version on lactame ([3903bd7](https://www.github.com/cheminfo/test-monorepo/commit/3903bd741d6e227b406f21b090561e32b468d63e))
+
 ### [0.4.10](https://www.github.com/cheminfo/test-monorepo/compare/test-package1-v0.4.9...test-package1-v0.4.10) (2022-07-23)
 
 
